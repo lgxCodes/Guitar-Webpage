@@ -1,5 +1,6 @@
 ﻿# Guitar-Webpage
 
-A custom site created to showcase front end web development skills using HTML, CSS and JavaScript
+A fully responsive product showcase page. Features include CSS grid and flexbox layouts, smooth scroll animations, interactive image galleries and cross-browser compatibility. 
 
-Here is a link to the site https://lgxcodes.github.io/Guitar-Webpage/
+
+Live Demo: https://lgxcodes.github.io/Guitar-Webpage/ 
