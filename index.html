@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fender FA-135CE - Strings N Things</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home" class="logo">Strings N Things</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#shop" class="nav-link">Shop</a>
+                    <div class="dropdown-content">
+                        <a href="#acoustic-guitars">Acoustic Guitars</a>
+                        <a href="#electric-guitars">Electric Guitars</a>
+                        <a href="#bass-guitars">Bass Guitars</a>
+                        <a href="#amps">Amps</a>
+                        <a href="#gear">Gear</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="cart-icon" onclick="viewCart()">
+                🛒
+                <span class="cart-count hidden" id="cartCount">0</span>
+            </div>
+        </nav>
+    </header>
+    <section class="product-detail">
+        <div class="product-container">
+            <div class="product-gallery">
+                <div class="main-image" id="mainImage">
+                    <img src="G1.png" alt="Fender FA-135CE Guitar">
+                </div>
+                <div class="gallery-navigation">
+                    <button class="nav-arrow prev" onclick="previousImage()" aria-label="Previous image">❮</button>
+                    <div class="thumbnail-gallery">
+                        <div class="thumbnail active" onclick="selectImage(0)">
+                            <img src="G1.png" alt="Guitar view 1">
+                        </div>
+                        <div class="thumbnail" onclick="selectImage(1)">
+                            <img src="G2.png" alt="Guitar view 2">
+                        </div>
+                        <div class="thumbnail" onclick="selectImage(2)">
+                            <img src="G3.png" alt="Guitar view 3">
+                        </div>
+                        <div class="thumbnail" onclick="selectImage(3)">
+                            <img src="G4.png" alt="Guitar view 4">
+                        </div>
+                        <div class="thumbnail" onclick="selectImage(4)">
+                            <img src="G5.png" alt="Guitar view 5">
+                        </div>
+                        <div class="thumbnail" onclick="selectImage(5)">
+                            <img src="G6.png" alt="Guitar view 6">
+                        </div>
+                    </div>
+                    <button class="nav-arrow next" onclick="nextImage()" aria-label="Next image">❯</button>
+                </div>
+                <div class="image-counter">
+                    <span id="currentImage">1</span> / <span id="totalImages">6</span>
+                </div>
+            </div>
+            <div class="product-info">
+                <div class="breadcrumb">
+                    <a href="#home">Home</a> / <a href="#acoustic-guitars">Acoustic Guitars</a> / Fender FA-135CE
+                </div>
+                <h1 class="product-title">Fender FA-135CE</h1>
+                <p class="product-subtitle">Premium Acoustic-Electric Guitar</p>
+                <div class="product-price">$319.99</div>
+                <div class="product-description">
+                    <p>The Fender FA-135CE concert acoustic-electric guitar combines affordability, versatility and sleek design for players seeking a reliable instrument for both practice and performance. Its concert-sized body delivers a balanced tonal response, making it ideal for intricate fingerpicking and precise chord strumming.</p>
+                </div>
+                <div class="product-specs">
+                    <h3 class="spec-title">Key Specifications</h3>
+                    <ul class="spec-list">
+                        <li>
+                            <span class="spec-label">Body Type</span>
+                            <span class="spec-value">Concert with Cutaway</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Top Wood</span>
+                            <span class="spec-value">Laminated Spruce</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Electronics</span>
+                            <span class="spec-value">Fishman Preamp with Tuner</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Fingerboard</span>
+                            <span class="spec-value">Rosewood</span>
+                        </li>
+                        <li>
+                            <span class="spec-label">Number of Frets</span>
+                            <span class="spec-value">20</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="quantity-selector">
+                    <span class="quantity-label">Quantity:</span>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="decreaseQuantity()">-</button>
+                        <input type="number" class="quantity-input" id="quantity" value="1" min="1" max="10">
+                        <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                    </div>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2026 Strings N Things. Stringing Along Since 1996.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
