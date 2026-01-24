@@ -153,6 +153,33 @@ nav {
     display: none;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #d4a574;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
 .product-detail {
     max-width: 1400px;
     margin: 60px auto;
@@ -467,9 +494,70 @@ footer {
 }
 
 @media (max-width: 968px) {
+    nav {
+        padding: 0 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: linear-gradient(135deg, #1a1410 0%, #2c1f16 100%);
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.8);
+        gap: 0;
+        padding: 20px 0;
+        border-bottom: 2px solid #d4a574;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 15px 20px;
+    }
+
+    .dropdown-content {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        border-top: 1px solid rgba(212, 165, 116, 0.2);
+        min-width: auto;
+        display: none;
+    }
+
+    .nav-item:hover .dropdown-content {
+        display: none;
+    }
+
+    .nav-item.active .dropdown-content {
+        display: block;
+    }
+
     .product-container {
         grid-template-columns: 1fr;
         padding: 30px;
+        gap: 40px;
+    }
+
+    .product-detail {
+        margin: 30px auto;
+        padding: 0 20px;
     }
 
     .main-image {
@@ -478,6 +566,7 @@ footer {
 
     .thumbnail-gallery {
         grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
 
     .product-title {
@@ -486,5 +575,142 @@ footer {
 
     .product-price {
         font-size: 28px;
+    }
+
+    .nav-arrow {
+        width: 50px;
+        height: 50px;
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 640px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        padding: 0 15px;
+        height: 60px;
+    }
+
+    .nav-menu {
+        top: 60px;
+    }
+
+    .product-container {
+        padding: 20px;
+        border-radius: 12px;
+        gap: 30px;
+    }
+
+    .product-detail {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+
+    .main-image {
+        height: 300px;
+    }
+
+    .thumbnail-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .thumbnail {
+        height: 80px;
+    }
+
+    .gallery-navigation {
+        gap: 10px;
+    }
+
+    .nav-arrow {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .product-title {
+        font-size: 26px;
+        margin-bottom: 12px;
+    }
+
+    .product-subtitle {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .product-price {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .product-description {
+        font-size: 15px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+
+    .spec-title {
+        font-size: 18px;
+    }
+
+    .spec-list li {
+        flex-direction: column;
+        gap: 5px;
+        align-items: flex-start;
+    }
+
+    .add-to-cart-btn {
+        padding: 16px;
+        font-size: 16px;
+    }
+
+    .cart-icon {
+        font-size: 22px;
+    }
+
+    footer {
+        padding: 20px;
+        margin-top: 40px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 18px;
+    }
+
+    .product-container {
+        padding: 15px;
+    }
+
+    .main-image {
+        height: 250px;
+    }
+
+    .product-title {
+        font-size: 22px;
+    }
+
+    .product-price {
+        font-size: 20px;
+    }
+
+    .thumbnail {
+        height: 70px;
+    }
+
+    .quantity-controls {
+        width: 100%;
+    }
+
+    .quantity-selector {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
     }
 }

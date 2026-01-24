@@ -129,3 +129,38 @@ document.addEventListener('keydown', function(e) {
 });
 
 window.addEventListener('load', initGallery);
+
+function toggleMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const hamburger = document.querySelector('.hamburger');
+    navMenu.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+
+function closeMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const hamburger = document.querySelector('.hamburger');
+    navMenu.classList.remove('active');
+    hamburger.classList.remove('active');
+
+    document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+    });
+}
+
+function toggleDropdown(event) {
+    if (window.innerWidth <= 968) {
+        event.preventDefault();
+        const navItem = event.currentTarget;
+        navItem.classList.toggle('active');
+    }
+}
+
+document.addEventListener('click', function(event) {
+    const navMenu = document.getElementById('navMenu');
+    const nav = document.querySelector('nav');
+
+    if (navMenu.classList.contains('active') && !nav.contains(event.target)) {
+        closeMenu();
+    }
+});
