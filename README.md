@@ -53,23 +53,3 @@ Guitar-Webpage/
 └── README.md           # Project documentation
 ```
 
-## Setup & Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/lgxCodes/Guitar-Webpage.git
-```
-
-2. Navigate to the project directory:
-```bash
-cd Guitar-Webpage
-```
-
-3. Open `index.html` in your browser or use a local server:
-```bash
-# Using Python 3
-python -m http.server 8000
-
-# Using Node.js with http-server
-npx http-server
-```
