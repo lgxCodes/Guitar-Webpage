@@ -1,7 +1,7 @@
 let cart = [];
 let quantity = 1;
 let currentImageIndex = 0;
-const images = ['G1.png', 'G2.png', 'G3.png', 'G4.png', 'G5.png', 'G6.png'];
+const images = ['images/G1.png', 'images/G2.png', 'images/G3.png', 'images/G4.png', 'images/G5.png', 'images/G6.png'];
 
 const product = {
     name: 'Fender FA-135CE',
