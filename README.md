@@ -2,8 +2,7 @@
 
 A fully responsive e-commerce product showcase page featuring modern web design principles and interactive user experiences.
 
-## Live Demo
-[View Live Demo](https://lgxcodes.github.io/Guitar-Webpage/)
+Live: https://lgxcodes.github.io/Guitar-Webpage/
 
 ## Features
 
@@ -52,4 +51,5 @@ Guitar-Webpage/
 ├── images/             # Product images (G1.png - G6.png)
 └── README.md           # Project documentation
 ```
+
 
